@@ -10,7 +10,7 @@ export function Banner() {
       bgRepeat="no-repeat"
       bgSize="cover"
     >
-      <Flex align="center" w="100%" mx="140px" justify="space-between">
+      <Flex align="center" w="100%" mx="auto" maxW='1160px' justify="space-between">
         <TextBanner />
         <ImageBanner />
       </Flex>
