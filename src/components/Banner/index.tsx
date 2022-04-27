@@ -1,18 +1,25 @@
 import { Flex } from "@chakra-ui/react";
-import { ImageBanner } from "./ImageBanner";
-import { TextBanner } from "./TextBanner";
+import { ImageContainer } from "./ImageContainer";
+import { TextContainer } from "./TextContainer";
 
 export function Banner() {
   return (
     <Flex
-      h="335px"
-      bgImage='url("./images/Background.svg")'
+      h={["163px", "250px", "335px"]}
+      bgImage="url('./images/Background.svg')"
       bgRepeat="no-repeat"
       bgSize="cover"
     >
-      <Flex align="center" w="100%" mx="auto" maxW='1160px' justify="space-between">
-        <TextBanner />
-        <ImageBanner />
+      <Flex
+        px="16px"
+        align="center"
+        maxW="1160px"
+        w="100%"
+        justify={["flex-start", "center", "center", "space-between"]}
+        mx="auto"
+      >
+        <TextContainer />
+        <ImageContainer />
       </Flex>
     </Flex>
   );

@@ -1,30 +1,30 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import { NewIcon } from "./NewIcon";
+import { Icon } from "./Icon";
 
 export function IconContainer() {
   return (
     <Grid
-      templateColumns="repeat(5, 1fr)"
-      maxW="1160px"
+      templateColumns={["1fr 1fr", "1fr 1fr", "1fr 1fr", "repeat(5, 1fr)"]}
+      maxW={["1160px"]}
       w="100%"
       mx="auto"
-      mt="32"
-      gap='91px'
+      mt={["36px", "36px", "114px"]}
+      gap={[1, 5]}
     >
-      <GridItem w='158px'>
-        <NewIcon text="vida noturna" icon="cocktail"></NewIcon>
+      <GridItem >
+        <Icon icon="cocktail" text="vida noturna" />
       </GridItem>
-      <GridItem w='158px'> 
-        <NewIcon text="praia" icon="surf"></NewIcon>
+      <GridItem>
+        <Icon icon="surf" text="praia" />
       </GridItem>
-      <GridItem w='158px'>
-        <NewIcon text="moderno" icon="building"></NewIcon>
+      <GridItem>
+        <Icon icon="building" text="moderno" />
       </GridItem>
-      <GridItem w='158px'>
-        <NewIcon text="clássico" icon="museum"></NewIcon>
+      <GridItem>
+        <Icon icon="museum" text="clássico" />
       </GridItem>
-      <GridItem w='158px'>
-        <NewIcon text="e mais..." icon="earth"></NewIcon>
+      <GridItem colSpan={[2, 2, 2, 1]}>
+        <Icon icon="earth" text="e mais..." />
       </GridItem>
     </Grid>
   );
